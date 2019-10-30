@@ -1,22 +1,22 @@
-﻿I.		Hozzunk létre .dll állományt a tanultak alapján! (solution_name.Data)
+﻿I.	Hozzunk létre .dll állományt a tanultak alapján! (solution_name.Data)
 
-II.		A létrehozott projekten jobb klikk. ( ADD -> New Item ) v. ( CTRL + SHIFT + A )
+II.	A létrehozott projekten jobb klikk. ( ADD -> New Item ) v. ( CTRL + SHIFT + A )
 
 III.	A Visual C# Items-ek közül válasszuk ki a Service-based Database-t, majd nevezzük el az adatbázisunkat ahogy
-		szeretnénk. (pl.: HRDatabase)
+	szeretnénk. (pl.: HRDatabase)
 
-IV.		Dupla Klikk a létrehozott db-n (.mdf fájlon) majd bal oldalt a db-n jobb klikk és add new query
+IV.	Dupla Klikk a létrehozott db-n (.mdf fájlon) majd bal oldalt a db-n jobb klikk és add new query
 
-V.		Itt futtassuk le a táblákat létrehozó .sql fájlt
+V.	Itt futtassuk le a táblákat létrehozó .sql fájlt
 
-VI.		A Solution Explorernél a .Data dll-nél megint jobb klikk ( ADD -> New Item ) v. ( CTRL + SHIFT + A )
+VI.	A Solution Explorernél a .Data dll-nél megint jobb klikk ( ADD -> New Item ) v. ( CTRL + SHIFT + A )
 
 VII.	Szintén a Visual c# Items-ek közül most a ADO.NETEntity Data Model-t hozzunk létre (pl.: HRDBContext
 
 VIII.	Code First From Project -> Next -> Tables-t pipáljuk ki, így hozzáadja a létrehozott táblákat -> Finish
-		Ezzel legenerált nekünk egy osztályt amiben automata létrehozta a táblában lévő attribútomok tulajdonságait.
+	Ezzel legenerált nekünk egy osztályt amiben automata létrehozta a táblában lévő attribútomok tulajdonságait.
 
-									( Így már tudunk hivatkozni a táblákra )
+					( Így már tudunk hivatkozni a táblákra )
 
 FONTOS, ahol meghívom a lekérdezéseket, (ebben az esetben majd a main lesz) annak a projektében lévő App.config fájlába
 másoljuk be a .Data App.config-ban lévő ConnectingString tag-et (az egészet, nyitő + záró + a közte lévő rész)!
