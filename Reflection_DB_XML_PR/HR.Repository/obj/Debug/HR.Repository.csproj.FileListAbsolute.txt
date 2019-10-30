@@ -1,0 +1,16 @@
+C:\Users\Vékony Martin\Documents\NIK\C#\Reflection_DB_XML_PR\HR.Repository\bin\Debug\HRDatabase.mdf
+C:\Users\Vékony Martin\Documents\NIK\C#\Reflection_DB_XML_PR\HR.Repository\bin\Debug\HRDatabase_log.ldf
+C:\Users\Vékony Martin\Documents\NIK\C#\Reflection_DB_XML_PR\HR.Repository\bin\Debug\HR.Repository.dll.config
+C:\Users\Vékony Martin\Documents\NIK\C#\Reflection_DB_XML_PR\HR.Repository\bin\Debug\HR.Repository.dll
+C:\Users\Vékony Martin\Documents\NIK\C#\Reflection_DB_XML_PR\HR.Repository\bin\Debug\HR.Repository.pdb
+C:\Users\Vékony Martin\Documents\NIK\C#\Reflection_DB_XML_PR\HR.Repository\bin\Debug\EntityFramework.dll
+C:\Users\Vékony Martin\Documents\NIK\C#\Reflection_DB_XML_PR\HR.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Vékony Martin\Documents\NIK\C#\Reflection_DB_XML_PR\HR.Repository\bin\Debug\HR.Data.dll
+C:\Users\Vékony Martin\Documents\NIK\C#\Reflection_DB_XML_PR\HR.Repository\bin\Debug\HR.Data.pdb
+C:\Users\Vékony Martin\Documents\NIK\C#\Reflection_DB_XML_PR\HR.Repository\bin\Debug\HR.Data.dll.config
+C:\Users\Vékony Martin\Documents\NIK\C#\Reflection_DB_XML_PR\HR.Repository\bin\Debug\EntityFramework.xml
+C:\Users\Vékony Martin\Documents\NIK\C#\Reflection_DB_XML_PR\HR.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Vékony Martin\Documents\NIK\C#\Reflection_DB_XML_PR\HR.Repository\obj\Debug\HR.Repository.csprojAssemblyReference.cache
+C:\Users\Vékony Martin\Documents\NIK\C#\Reflection_DB_XML_PR\HR.Repository\obj\Debug\HR.Repository.csproj.CopyComplete
+C:\Users\Vékony Martin\Documents\NIK\C#\Reflection_DB_XML_PR\HR.Repository\obj\Debug\HR.Repository.dll
+C:\Users\Vékony Martin\Documents\NIK\C#\Reflection_DB_XML_PR\HR.Repository\obj\Debug\HR.Repository.pdb
