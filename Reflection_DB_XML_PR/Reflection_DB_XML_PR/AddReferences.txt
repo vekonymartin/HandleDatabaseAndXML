@@ -1,0 +1,2 @@
+﻿V1. .dll vagy projekt nevén jobb klikk -> add item -> references ( Bal oldalt a Projects fül legyen kiválasztva )
+v2. Jobb klikk a References-en -> Add References ( Bal oldalt a Projects fül legyen kiválasztva )
