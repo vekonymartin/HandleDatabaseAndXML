@@ -26,6 +26,11 @@ namespace HR.Logic
             this.deptRepo = deptRepo;
         }
 
+        // ===========================================================================================
+        // XML Dokumentáció url=http://users.nik.uni-obuda.hu/prog3/_progtools/prog_tools.pdf 17.oldal
+        // 3 db '/'-et kell rakni a metódus fölött és autómatikusan legenerálja
+        //                                  ||
+        //                                  \/
         /// <summary>
         /// Method change city name by id
         /// </summary>
@@ -82,6 +87,60 @@ namespace HR.Logic
         public EMP GetOneEmp(int EMPNO)
         {
             return empRepo.GetOne(EMPNO);
+        }
+
+       
+        public void GetEverything()
+        {
+            var t1 = (from x in empRepo.GetAll()
+                      select x).AsEnumerable(); // . ToArray()
+            var t2 = (from x in deptRepo.GetAll()
+                      select x).AsEnumerable(); // . ToArray()
+
+            //           /\
+            //           ||
+            // ezt csak akkor kell alkalmazni ha egy másik lekérdezésre hivatkozok egy lekérdezésben
+            // ======================================================================================== 
+
+            var all = (from x in empRepo.GetAll().AsEnumerable()
+                      join kapcs in deptRepo.GetAll().AsEnumerable() on x.DEPTNO equals kapcs.DEPTNO
+                      select new Everything()
+                      {
+                          DEPTNO = (int)kapcs.DEPTNO,
+                          DEPTNAME = kapcs.DNAME,
+                          LOC = kapcs.LOC,
+                          ENAME = x.ENAME,
+                          EMPNO = (int)x.EMPNO,
+                          HIREDATE = (DateTime)x.HIREDATE,
+                          JOB = x.JOB,
+                          MGR = (int)(x.MGR ?? 0),
+                          SAL = (int)(x.SAL ?? 0),
+                          COMM = (int)(x.COMM ?? 0)
+                      }).AsEnumerable();
+            foreach (var item in all)
+            {
+                Console.WriteLine(item.DEPTNAME + " " + item.ENAME + " " + item.SAL);
+            }
+        }
+
+        /// <summary>
+        /// Return list with Departments' name and people average salary whose work there
+        /// </summary>
+        /// <returns>List<AverageSalaryPerDepartment></returns>
+        public IList<AverageSalaryPerDepartment> GetSalaryAveragePerDepartment()
+        {
+            var avg2 = (from e in empRepo.GetAll()
+                        group e by e.DEPT into grp
+                        select new AverageSalaryPerDepartment()
+                        {
+                            DepartmentName = grp.Key.DNAME,
+                            AverageSalary = (double)grp.Average(x => x.SAL + (x.COMM ?? 0))
+                            //                                                       /\
+                            //                                                       ||
+                            // ?? operátor: az NVL függvény megfelelője (ha a bal oldala null, behelyettesíti a jobb oldalt) 
+                        }).AsEnumerable();// . ToArray();
+
+            return avg2.ToList();
         }
     }
 }

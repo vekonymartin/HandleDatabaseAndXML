@@ -52,6 +52,22 @@ namespace Reflection_DB_XML_PR
             {
                 Console.WriteLine("DEPTNO = {0}\tDNAME = {1}\tLOC= {2}",item.DEPTNO,item.DNAME, item.LOC);
             }
+            Console.WriteLine(new string('*',50));
+
+            //foreach (var item in hr.GetSalaryAveragePerDepartment())
+            //{
+            //    Console.WriteLine(item);
+            //}
+            
+            foreach (var item in hr.GetSalaryAveragePerDepartment())
+            {
+                Console.WriteLine(item);
+            }
+        }
+        public static void CheckGetEverything()
+        {
+            HRLogic h = new HRLogic();
+            h.GetEverything();
         }
         #endregion
 
@@ -59,7 +75,9 @@ namespace Reflection_DB_XML_PR
         {
             //CheckDBConnecting();
             //CheckSeparatedClass();
-            CheckContractedClass();
+            //CheckContractedClass();
+            CheckGetEverything();
+
 
 
             Console.ReadLine();

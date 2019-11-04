@@ -51,8 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AverageSalaryPerDepartment.cs" />
     <Compile Include="DeptLogic.cs" />
     <Compile Include="EmpLogic.cs" />
+    <Compile Include="Everything.cs" />
     <Compile Include="HRLogic.cs" />
     <Compile Include="Interfaces\IDeptLogic.cs" />
     <Compile Include="Interfaces\IEmpLogic.cs" />
