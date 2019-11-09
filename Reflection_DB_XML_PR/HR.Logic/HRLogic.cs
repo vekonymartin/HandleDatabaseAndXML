@@ -90,6 +90,10 @@ namespace HR.Logic
         }
 
        
+        public void RemoveDeptLocation(string location)
+        {
+            deptRepo.RemoveLocation(location);
+        }
         public void GetEverything()
         {
             var t1 = (from x in empRepo.GetAll()
@@ -142,5 +146,8 @@ namespace HR.Logic
 
             return avg2.ToList();
         }
+
+        
+
     }
 }

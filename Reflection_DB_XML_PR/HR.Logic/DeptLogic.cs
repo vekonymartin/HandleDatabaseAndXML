@@ -11,7 +11,7 @@ using HR.Data;
 
 namespace HR.Logic
 {
-    class DeptLogic : IDeptLogic
+    public class DeptLogic : IDeptLogic
     {
         IDeptRepository deptRepo;
         public DeptLogic()
@@ -35,6 +35,19 @@ namespace HR.Logic
         public DEPT GetOneDept(int DEPTNO)
         {
             return deptRepo.GetOne(DEPTNO);
+        }
+
+        public void InsertNewDepartment(int DEPTNO, string DEPTNAME, string LOC)
+        {
+            deptRepo.InsertNewDept(DEPTNO, DEPTNAME, LOC);
+        }
+        public void DeleteLocation(string location)
+        {
+            deptRepo.RemoveLocation(location);
+        }
+        public void InsertNewCity()
+        {
+            deptRepo.InsertOneData(40, "BOSTON");
         }
     }
 }

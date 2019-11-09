@@ -13,6 +13,7 @@ namespace HR.Repository
     public interface IEmpRepository : IRepository<EMP>
     {
         void ChangeSalary(int EMPNO, int newSalary);
-
+        void InsertEmployee();
+        void RemoveEmp(string ENAME);
     }
 }

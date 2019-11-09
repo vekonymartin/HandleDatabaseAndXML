@@ -38,5 +38,15 @@ namespace HR.Logic
         {
             return empRepo.GetOne(EMPNO);
         }
+
+        public void RemoveEmployee(string ENAME)
+        {
+            empRepo.RemoveEmp(ENAME);
+        }
+
+        public void InsertNewEmployee()
+        {
+            empRepo.InsertEmployee();
+        }
     }
 }
